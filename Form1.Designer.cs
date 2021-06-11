@@ -45,6 +45,8 @@ namespace Calculatrice
             this.bu_back = new System.Windows.Forms.Button();
             this.l_note = new System.Windows.Forms.Label();
             this.l_cst = new System.Windows.Forms.Label();
+            this.cb_cst = new System.Windows.Forms.ComboBox();
+            this.lL_github = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur2)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +59,7 @@ namespace Calculatrice
             this.bu_aq.Size = new System.Drawing.Size(153, 44);
             this.bu_aq.TabIndex = 0;
             this.bu_aq.Text = "Aire quadrilatère";
-            this.toolTip1.SetToolTip(this.bu_aq, "PErmet dfe calculer une aire d\'un quadrilatère");
+            this.toolTip1.SetToolTip(this.bu_aq, "Permet de calculer une aire d\'un quadrilatère");
             this.bu_aq.UseVisualStyleBackColor = true;
             this.bu_aq.Click += new System.EventHandler(this.bu_aq_Click);
             // 
@@ -65,7 +67,7 @@ namespace Calculatrice
             // 
             this.l_valeur1.AutoSize = true;
             this.l_valeur1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_valeur1.Location = new System.Drawing.Point(109, 153);
+            this.l_valeur1.Location = new System.Drawing.Point(64, 153);
             this.l_valeur1.Name = "l_valeur1";
             this.l_valeur1.Size = new System.Drawing.Size(60, 24);
             this.l_valeur1.TabIndex = 1;
@@ -76,7 +78,7 @@ namespace Calculatrice
             // 
             this.l_valeur2.AutoSize = true;
             this.l_valeur2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_valeur2.Location = new System.Drawing.Point(109, 194);
+            this.l_valeur2.Location = new System.Drawing.Point(64, 194);
             this.l_valeur2.Name = "l_valeur2";
             this.l_valeur2.Size = new System.Drawing.Size(60, 24);
             this.l_valeur2.TabIndex = 2;
@@ -93,6 +95,7 @@ namespace Calculatrice
             this.bu_calc.Size = new System.Drawing.Size(96, 44);
             this.bu_calc.TabIndex = 5;
             this.bu_calc.Text = "Calc";
+            this.toolTip1.SetToolTip(this.bu_calc, "Bouton \"Calculer\"");
             this.bu_calc.UseVisualStyleBackColor = false;
             this.bu_calc.Click += new System.EventHandler(this.bu_calc_Click);
             // 
@@ -123,6 +126,7 @@ namespace Calculatrice
             this.num_valeur2.Name = "num_valeur2";
             this.num_valeur2.Size = new System.Drawing.Size(120, 29);
             this.num_valeur2.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.num_valeur2, "Entre ton nombre ici");
             this.num_valeur2.Visible = false;
             this.num_valeur2.ValueChanged += new System.EventHandler(this.num_valeur2_ValueChanged);
             // 
@@ -164,6 +168,7 @@ namespace Calculatrice
             this.bu_sin.Text = "sin";
             this.toolTip1.SetToolTip(this.bu_sin, "Permet de calculer avec le sinus");
             this.bu_sin.UseVisualStyleBackColor = true;
+            this.bu_sin.Click += new System.EventHandler(this.bu_sin_Click);
             // 
             // bu_tan
             // 
@@ -175,6 +180,7 @@ namespace Calculatrice
             this.bu_tan.Text = "tan";
             this.toolTip1.SetToolTip(this.bu_tan, "Permet de calculer la tangente");
             this.bu_tan.UseVisualStyleBackColor = true;
+            this.bu_tan.Click += new System.EventHandler(this.bu_tan_Click);
             // 
             // bu_back
             // 
@@ -186,6 +192,7 @@ namespace Calculatrice
             this.bu_back.Size = new System.Drawing.Size(96, 44);
             this.bu_back.TabIndex = 9;
             this.bu_back.Text = "Retour";
+            this.toolTip1.SetToolTip(this.bu_back, "Permet de revenir au menu de base");
             this.bu_back.UseVisualStyleBackColor = false;
             this.bu_back.Click += new System.EventHandler(this.bu_back_Click);
             // 
@@ -205,18 +212,46 @@ namespace Calculatrice
             // 
             this.l_cst.AutoSize = true;
             this.l_cst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_cst.Location = new System.Drawing.Point(659, 67);
+            this.l_cst.Location = new System.Drawing.Point(581, 71);
             this.l_cst.Name = "l_cst";
             this.l_cst.Size = new System.Drawing.Size(46, 18);
             this.l_cst.TabIndex = 17;
             this.l_cst.Text = "label1";
             this.l_cst.Visible = false;
             // 
+            // cb_cst
+            // 
+            this.cb_cst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_cst.FormattingEnabled = true;
+            this.cb_cst.Location = new System.Drawing.Point(612, 113);
+            this.cb_cst.Name = "cb_cst";
+            this.cb_cst.Size = new System.Drawing.Size(156, 28);
+            this.cb_cst.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.cb_cst, "Choisis la longueur connue");
+            this.cb_cst.Visible = false;
+            this.cb_cst.SelectedIndexChanged += new System.EventHandler(this.cb_cst_SelectedIndexChanged);
+            // 
+            // lL_github
+            // 
+            this.lL_github.AutoSize = true;
+            this.lL_github.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lL_github.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lL_github.Location = new System.Drawing.Point(645, 478);
+            this.lL_github.Name = "lL_github";
+            this.lL_github.Size = new System.Drawing.Size(49, 16);
+            this.lL_github.TabIndex = 20;
+            this.lL_github.TabStop = true;
+            this.lL_github.Text = "GitHub";
+            this.toolTip1.SetToolTip(this.lL_github, "Lien du GitHub du programme");
+            this.lL_github.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lL_github_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 517);
+            this.Controls.Add(this.lL_github);
+            this.Controls.Add(this.cb_cst);
             this.Controls.Add(this.l_cst);
             this.Controls.Add(this.l_note);
             this.Controls.Add(this.bu_tan);
@@ -258,6 +293,8 @@ namespace Calculatrice
         private System.Windows.Forms.Button bu_tan;
         private System.Windows.Forms.Label l_note;
         private System.Windows.Forms.Label l_cst;
+        private System.Windows.Forms.ComboBox cb_cst;
+        private System.Windows.Forms.LinkLabel lL_github;
     }
 }
 

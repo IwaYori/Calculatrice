@@ -18,7 +18,6 @@ namespace Calculatrice
         }
 
         int whereAmI = 0;
-        int fraction = 0;
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,6 +59,66 @@ namespace Calculatrice
             {
                 double result = (valeur1 * valeur2) / 2;
                 l_result.Text = "Le résultat est : " + Convert.ToString(result) + " cm²";
+            }
+            if (whereAmI == 3)
+            {
+                double angle = Convert.ToInt32(num_valeur2.Text);
+
+                double b = (angle * (Math.PI)) / 180;
+                double cosAngle = Math.Cos(b);
+
+                double result = (valeur1 / cosAngle);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result) + "cm";
+            }
+            if (whereAmI == 4)
+            {
+                double angle = Convert.ToInt32(num_valeur2.Text);
+
+                double b = (angle * (Math.PI)) / 180;
+                double cosAngle = Math.Cos(b);
+
+                double result = (valeur1 * cosAngle);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result) + "cm";
+            }
+            if (whereAmI == 5)
+            {
+                double angle = Convert.ToInt32(num_valeur2.Text);
+
+                double b = (angle * (Math.PI)) / 180;
+                double sinAngle = Math.Sin(b);
+
+                double result = (valeur1 / sinAngle);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result) + "cm";
+            }
+            if (whereAmI == 6)
+            {
+                double angle = Convert.ToInt32(num_valeur2.Text);
+
+                double b = (angle * (Math.PI)) / 180;
+                double sinAngle = Math.Sin(b);
+
+                double result = (valeur1 * sinAngle);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result) + "cm";
+            }
+            if (whereAmI == 7)
+            {
+                double angle = Convert.ToInt32(num_valeur2.Text);
+
+                double b = (angle * (Math.PI)) / 180;
+                double tanAngle = Math.Tan(b);
+
+                double result = (valeur1 / tanAngle);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result) + "cm";
+            }
+            if (whereAmI == 8)
+            {
+                double angle = Convert.ToInt32(num_valeur2.Text);
+
+                double b = (angle * (Math.PI)) / 180;
+                double tanAngle = Math.Tan(b);
+
+                double result = (valeur1 * tanAngle);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result) + "cm";
             }
 
             l_result.Visible = true;
@@ -153,16 +212,20 @@ namespace Calculatrice
             l_result.Visible = false;
             l_note.Visible = false;
             l_cst.Visible = false;
+            cb_cst.Visible = false;
 
             bu_aq.Visible = true;
             bu_at.Visible = true;
             bu_cos.Visible = true;
             bu_sin.Visible = true;
             bu_tan.Visible = true;
+
+            cb_cst.Items.Clear();
         }
 
         private void bu_cos_Click(object sender, EventArgs e)
         {
+            cb_cst.Items.Clear();
             l_note.Visible = true;
 
             bu_aq.Visible = false;
@@ -173,7 +236,145 @@ namespace Calculatrice
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
-            du_cst.Visible = true;
+            l_cst.Text = "Choisissez la longueur connue.";
+            cb_cst.Visible = true;
+
+            cb_cst.Items.Add("CA (cos)");
+            cb_cst.Items.Add("HYP (cos)");
+            cb_cst.SelectedIndex = 0;
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = true;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = true;
+        }
+
+        private void cb_cst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cb_cst.Text == "CA (cos)")
+            {
+                whereAmI = 3;
+
+                l_valeur1.Text = "Longeur CA";
+                l_valeur2.Text = "Angle";
+             
+                l_valeur1.Visible = true;
+                l_valeur2.Visible = true;
+            }
+
+            if (cb_cst.Text == "HYP (cos)")
+            {
+                whereAmI = 4;
+
+                l_valeur1.Text = "Longueur HYP";
+                l_valeur2.Text = "Angle";
+
+                l_valeur1.Visible = true;
+                l_valeur2.Visible = true;
+            }
+
+            if (cb_cst.Text == "CO (sin)")
+            {
+                whereAmI = 5;
+
+                l_valeur1.Text = "Longeur CO";
+                l_valeur2.Text = "Angle";
+
+                l_valeur1.Visible = true;
+                l_valeur2.Visible = true;
+            }
+
+            if (cb_cst.Text == "HYP (sin)")
+            {
+                whereAmI = 6;
+
+                l_valeur1.Text = "Longeur HYP";
+                l_valeur2.Text = "Angle";
+
+                l_valeur1.Visible = true;
+                l_valeur2.Visible = true;
+            }
+
+            if (cb_cst.Text == "CO (tan)")
+            {
+                whereAmI = 7;
+
+                l_valeur1.Text = "Longueur CO";
+                l_valeur2.Text = "Angle";
+
+                l_valeur1.Visible = true;
+                l_valeur2.Visible = true;
+            }
+
+            if (cb_cst.Text == "CA (tan)")
+            {
+                whereAmI = 8;
+
+                l_valeur1.Text = "Longueur CA";
+                l_valeur2.Text = "Angle";
+
+                l_valeur1.Visible = true;
+                l_valeur2.Visible = true;
+            }
+
+        }
+
+        private void bu_sin_Click(object sender, EventArgs e)
+        {
+            cb_cst.Items.Clear();
+            l_note.Visible = true;
+
+            bu_aq.Visible = false;
+            bu_at.Visible = false;
+            bu_cos.Visible = false;
+            bu_sin.Visible = false;
+            bu_tan.Visible = false;
+
+            bu_back.Enabled = true;
+            l_cst.Visible = true;
+            l_cst.Text = "Choisissez la longueur connue.";
+            cb_cst.Visible = true;
+
+            cb_cst.Items.Add("CO (sin)");
+            cb_cst.Items.Add("HYP (sin)");
+            cb_cst.SelectedIndex = 0;
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = true;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = true;
+        }
+
+        private void bu_tan_Click(object sender, EventArgs e)
+        {
+            cb_cst.Items.Clear();
+            l_note.Visible = true;
+
+            bu_aq.Visible = false;
+            bu_at.Visible = false;
+            bu_cos.Visible = false;
+            bu_sin.Visible = false;
+            bu_tan.Visible = false;
+
+            bu_back.Enabled = true;
+            l_cst.Visible = true;
+            l_cst.Text = "Choisissez la longueur connue.";
+            cb_cst.Visible = true;
+
+            cb_cst.Items.Add("CO (tan)");
+            cb_cst.Items.Add("CA (tan)");
+            cb_cst.SelectedIndex = 0;
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = true;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = true;
+        }
+
+        private void lL_github_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/IwaYori/Calculatrice");
         }
     }
 }
