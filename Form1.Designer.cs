@@ -48,8 +48,12 @@ namespace Calculatrice
             this.l_note = new System.Windows.Forms.Label();
             this.l_cst = new System.Windows.Forms.Label();
             this.bu_vb = new System.Windows.Forms.Button();
+            this.bu_vpbc = new System.Windows.Forms.Button();
+            this.l_valeur3 = new System.Windows.Forms.Label();
+            this.num_valeur3 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_valeur3)).BeginInit();
             this.SuspendLayout();
             // 
             // bu_aq
@@ -254,15 +258,51 @@ namespace Calculatrice
             this.bu_vb.Size = new System.Drawing.Size(123, 44);
             this.bu_vb.TabIndex = 21;
             this.bu_vb.Text = "Volume boule";
-            this.toolTip1.SetToolTip(this.bu_vb, "Permet de calculer l\'aire d\'un triangle");
+            this.toolTip1.SetToolTip(this.bu_vb, "Permet de calculer le volume d\'une boule");
             this.bu_vb.UseVisualStyleBackColor = true;
             this.bu_vb.Click += new System.EventHandler(this.bu_vb_Click);
+            // 
+            // bu_vpbc
+            // 
+            this.bu_vpbc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bu_vpbc.Location = new System.Drawing.Point(417, 0);
+            this.bu_vpbc.Name = "bu_vpbc";
+            this.bu_vpbc.Size = new System.Drawing.Size(149, 44);
+            this.bu_vpbc.TabIndex = 22;
+            this.bu_vpbc.Text = "Vol. Py. base carré";
+            this.toolTip1.SetToolTip(this.bu_vpbc, "Permet de calculer le volume d\'une pyramide à base carré");
+            this.bu_vpbc.UseVisualStyleBackColor = true;
+            this.bu_vpbc.Click += new System.EventHandler(this.bu_vpbc_Click);
+            // 
+            // l_valeur3
+            // 
+            this.l_valeur3.AutoSize = true;
+            this.l_valeur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_valeur3.Location = new System.Drawing.Point(64, 233);
+            this.l_valeur3.Name = "l_valeur3";
+            this.l_valeur3.Size = new System.Drawing.Size(60, 24);
+            this.l_valeur3.TabIndex = 23;
+            this.l_valeur3.Text = "label1";
+            this.l_valeur3.Visible = false;
+            // 
+            // num_valeur3
+            // 
+            this.num_valeur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_valeur3.Location = new System.Drawing.Point(272, 233);
+            this.num_valeur3.Name = "num_valeur3";
+            this.num_valeur3.Size = new System.Drawing.Size(120, 29);
+            this.num_valeur3.TabIndex = 24;
+            this.toolTip1.SetToolTip(this.num_valeur3, "Entre ton nombre ici");
+            this.num_valeur3.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 517);
+            this.Controls.Add(this.num_valeur3);
+            this.Controls.Add(this.l_valeur3);
+            this.Controls.Add(this.bu_vpbc);
             this.Controls.Add(this.bu_vb);
             this.Controls.Add(this.lL_github);
             this.Controls.Add(this.cb_cst);
@@ -285,6 +325,7 @@ namespace Calculatrice
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_valeur3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,6 +351,9 @@ namespace Calculatrice
         private System.Windows.Forms.ComboBox cb_cst;
         private System.Windows.Forms.LinkLabel lL_github;
         private System.Windows.Forms.Button bu_vb;
+        private System.Windows.Forms.Button bu_vpbc;
+        private System.Windows.Forms.Label l_valeur3;
+        private System.Windows.Forms.NumericUpDown num_valeur3;
     }
 }
 
