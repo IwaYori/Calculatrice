@@ -120,6 +120,12 @@ namespace Calculatrice
                 double result = (valeur1 * tanAngle);
                 l_result.Text = "Le résultat est : " + Convert.ToString(result) + "cm";
             }
+            if (whereAmI == 9)
+            {
+                double r3 = (valeur1 * valeur1 * valeur1);
+                double result = (4 / 3) * (Math.PI) * (r3);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result) + " cm3";
+            }
 
             l_result.Visible = true;
         }
@@ -168,9 +174,7 @@ namespace Calculatrice
 
             if (valeur1 == 0 || valeur2 == 0)
             {
-
                 bu_calc.Enabled = false;
-
             }
             else
             {
@@ -216,6 +220,7 @@ namespace Calculatrice
 
             bu_aq.Visible = true;
             bu_at.Visible = true;
+            bu_vb.Visible = true;
             bu_cos.Visible = true;
             bu_sin.Visible = true;
             bu_tan.Visible = true;
@@ -233,6 +238,7 @@ namespace Calculatrice
             bu_cos.Visible = false;
             bu_sin.Visible = false;
             bu_tan.Visible = false;
+            bu_vb.Visible = false;
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
@@ -330,6 +336,7 @@ namespace Calculatrice
             bu_cos.Visible = false;
             bu_sin.Visible = false;
             bu_tan.Visible = false;
+            bu_vb.Visible = false;
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
@@ -356,6 +363,7 @@ namespace Calculatrice
             bu_cos.Visible = false;
             bu_sin.Visible = false;
             bu_tan.Visible = false;
+            bu_vb.Visible = false;
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
@@ -375,6 +383,22 @@ namespace Calculatrice
         private void lL_github_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/IwaYori/Calculatrice");
+        }
+
+        private void bu_vb_Click(object sender, EventArgs e)
+        {
+            whereAmI = 9;
+
+            l_valeur1.Text = "Rayon";
+
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "1";
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = false;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = false;
+            bu_back.Enabled = true;
         }
     }
 }

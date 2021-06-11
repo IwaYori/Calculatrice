@@ -43,10 +43,11 @@ namespace Calculatrice
             this.bu_sin = new System.Windows.Forms.Button();
             this.bu_tan = new System.Windows.Forms.Button();
             this.bu_back = new System.Windows.Forms.Button();
-            this.l_note = new System.Windows.Forms.Label();
-            this.l_cst = new System.Windows.Forms.Label();
             this.cb_cst = new System.Windows.Forms.ComboBox();
             this.lL_github = new System.Windows.Forms.LinkLabel();
+            this.l_note = new System.Windows.Forms.Label();
+            this.l_cst = new System.Windows.Forms.Label();
+            this.bu_vb = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur2)).BeginInit();
             this.SuspendLayout();
@@ -196,29 +197,6 @@ namespace Calculatrice
             this.bu_back.UseVisualStyleBackColor = false;
             this.bu_back.Click += new System.EventHandler(this.bu_back_Click);
             // 
-            // l_note
-            // 
-            this.l_note.AutoSize = true;
-            this.l_note.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_note.ForeColor = System.Drawing.Color.Gray;
-            this.l_note.Location = new System.Drawing.Point(560, 360);
-            this.l_note.Name = "l_note";
-            this.l_note.Size = new System.Drawing.Size(51, 20);
-            this.l_note.TabIndex = 15;
-            this.l_note.Text = "label1";
-            this.l_note.Visible = false;
-            // 
-            // l_cst
-            // 
-            this.l_cst.AutoSize = true;
-            this.l_cst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_cst.Location = new System.Drawing.Point(581, 71);
-            this.l_cst.Name = "l_cst";
-            this.l_cst.Size = new System.Drawing.Size(46, 18);
-            this.l_cst.TabIndex = 17;
-            this.l_cst.Text = "label1";
-            this.l_cst.Visible = false;
-            // 
             // cb_cst
             // 
             this.cb_cst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,11 +223,47 @@ namespace Calculatrice
             this.toolTip1.SetToolTip(this.lL_github, "Lien du GitHub du programme");
             this.lL_github.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lL_github_LinkClicked);
             // 
+            // l_note
+            // 
+            this.l_note.AutoSize = true;
+            this.l_note.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_note.ForeColor = System.Drawing.Color.Gray;
+            this.l_note.Location = new System.Drawing.Point(560, 360);
+            this.l_note.Name = "l_note";
+            this.l_note.Size = new System.Drawing.Size(51, 20);
+            this.l_note.TabIndex = 15;
+            this.l_note.Text = "label1";
+            this.l_note.Visible = false;
+            // 
+            // l_cst
+            // 
+            this.l_cst.AutoSize = true;
+            this.l_cst.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_cst.Location = new System.Drawing.Point(581, 71);
+            this.l_cst.Name = "l_cst";
+            this.l_cst.Size = new System.Drawing.Size(46, 18);
+            this.l_cst.TabIndex = 17;
+            this.l_cst.Text = "label1";
+            this.l_cst.Visible = false;
+            // 
+            // bu_vb
+            // 
+            this.bu_vb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bu_vb.Location = new System.Drawing.Point(288, 0);
+            this.bu_vb.Name = "bu_vb";
+            this.bu_vb.Size = new System.Drawing.Size(123, 44);
+            this.bu_vb.TabIndex = 21;
+            this.bu_vb.Text = "Volume boule";
+            this.toolTip1.SetToolTip(this.bu_vb, "Permet de calculer l\'aire d\'un triangle");
+            this.bu_vb.UseVisualStyleBackColor = true;
+            this.bu_vb.Click += new System.EventHandler(this.bu_vb_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 517);
+            this.Controls.Add(this.bu_vb);
             this.Controls.Add(this.lL_github);
             this.Controls.Add(this.cb_cst);
             this.Controls.Add(this.l_cst);
@@ -295,6 +309,7 @@ namespace Calculatrice
         private System.Windows.Forms.Label l_cst;
         private System.Windows.Forms.ComboBox cb_cst;
         private System.Windows.Forms.LinkLabel lL_github;
+        private System.Windows.Forms.Button bu_vb;
     }
 }
 
