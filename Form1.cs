@@ -40,19 +40,15 @@ namespace Calculatrice
             num_valeur1.Visible = true;
             num_valeur2.Visible = true;
             bu_back.Enabled = true;
-            l_valeur3.Visible = false;
-            num_valeur3.Visible = false;
         }
 
         private void bu_calc_Click(object sender, EventArgs e)
         {
             double valeur1;
             double valeur2;
-            double valeur3;
 
             valeur1 = Convert.ToDouble(num_valeur1.Text);
             valeur2 = Convert.ToDouble(num_valeur2.Text);
-            valeur3 = Convert.ToDouble(num_valeur3.Text);
 
             if (whereAmI == 1) 
             {
@@ -132,7 +128,7 @@ namespace Calculatrice
             }
             if (whereAmI == 10)
             {
-                double result = (1 / 3) * (valeur1 * valeur2) * valeur3;
+                double result =(1 / 3) * (valeur1 * valeur1) * valeur2;
                 l_result.Text = "Le résultat est : " + Convert.ToString(result) + " cm3";
             }
             if (whereAmI == 11)
@@ -210,8 +206,6 @@ namespace Calculatrice
             l_valeur2.Visible = true;
             num_valeur1.Visible = true;
             num_valeur2.Visible = true;
-            l_valeur3.Visible = false;
-            num_valeur3.Visible = false;
         }
 
         private void l_result_Click(object sender, EventArgs e)
@@ -233,8 +227,6 @@ namespace Calculatrice
             l_note.Visible = false;
             l_cst.Visible = false;
             cb_cst.Visible = false;
-            l_valeur3.Visible = false;
-            num_valeur3.Visible = false;
 
             bu_aq.Visible = true;
             bu_at.Visible = true;
@@ -260,8 +252,6 @@ namespace Calculatrice
             bu_tan.Visible = false;
             bu_vb.Visible = false;
             bu_vpbc.Visible = false;
-            l_valeur3.Visible = false;
-            num_valeur3.Visible = false;
             bu_vc.Visible = false;
 
             bu_back.Enabled = true;
@@ -362,8 +352,6 @@ namespace Calculatrice
             bu_tan.Visible = false;
             bu_vb.Visible = false;
             bu_vpbc.Visible = false;
-            l_valeur3.Visible = false;
-            num_valeur3.Visible = false;
             bu_vc.Visible = false;
 
             bu_back.Enabled = true;
@@ -393,8 +381,6 @@ namespace Calculatrice
             bu_tan.Visible = false;
             bu_vb.Visible = false;
             bu_vpbc.Visible = false;
-            l_valeur3.Visible = false;
-            num_valeur3.Visible = false;
             bu_vc.Visible = false;
 
             bu_back.Enabled = true;
@@ -428,12 +414,9 @@ namespace Calculatrice
 
             l_valeur1.Visible = true;
             l_valeur2.Visible = false;
-            l_valeur3.Visible = false;
             num_valeur1.Visible = true;
             num_valeur2.Visible = false;
             bu_back.Enabled = true;
-            l_valeur3.Visible = false;
-            num_valeur3.Visible = false;
         }
 
         private void bu_vpbc_Click(object sender, EventArgs e)
@@ -441,19 +424,15 @@ namespace Calculatrice
             whereAmI = 10;
 
             l_valeur1.Text = "Longueur de la base";
-            l_valeur2.Text = "Largeur de la base";
-            l_valeur3.Text = "Hauteur";
+            l_valeur2.Text = "Hauteur";
 
             num_valeur1.Text = "0";
             num_valeur2.Text = "0";
-            num_valeur3.Text = "0";
 
             l_valeur1.Visible = true;
             l_valeur2.Visible = true;
-            l_valeur3.Visible = true;
             num_valeur1.Visible = true;
             num_valeur2.Visible = true;
-            num_valeur3.Visible = true;
             bu_back.Enabled = true;
         }
 

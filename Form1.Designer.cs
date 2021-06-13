@@ -30,6 +30,7 @@ namespace Calculatrice
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bu_aq = new System.Windows.Forms.Button();
             this.l_valeur1 = new System.Windows.Forms.Label();
             this.l_valeur2 = new System.Windows.Forms.Label();
@@ -46,15 +47,13 @@ namespace Calculatrice
             this.cb_cst = new System.Windows.Forms.ComboBox();
             this.lL_github = new System.Windows.Forms.LinkLabel();
             this.bu_vb = new System.Windows.Forms.Button();
-            this.bu_vpbc = new System.Windows.Forms.Button();
-            this.num_valeur3 = new System.Windows.Forms.NumericUpDown();
+            this.bu_vc = new System.Windows.Forms.Button();
             this.l_note = new System.Windows.Forms.Label();
             this.l_cst = new System.Windows.Forms.Label();
-            this.l_valeur3 = new System.Windows.Forms.Label();
-            this.bu_vc = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.l_virg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_valeur3)).BeginInit();
             this.SuspendLayout();
             // 
             // bu_aq
@@ -240,27 +239,17 @@ namespace Calculatrice
             this.bu_vb.UseVisualStyleBackColor = true;
             this.bu_vb.Click += new System.EventHandler(this.bu_vb_Click);
             // 
-            // bu_vpbc
+            // bu_vc
             // 
-            this.bu_vpbc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bu_vpbc.Location = new System.Drawing.Point(417, 0);
-            this.bu_vpbc.Name = "bu_vpbc";
-            this.bu_vpbc.Size = new System.Drawing.Size(149, 44);
-            this.bu_vpbc.TabIndex = 22;
-            this.bu_vpbc.Text = "Vol. Py. base carré";
-            this.toolTip1.SetToolTip(this.bu_vpbc, "Permet de calculer le volume d\'une pyramide à base carré");
-            this.bu_vpbc.UseVisualStyleBackColor = true;
-            this.bu_vpbc.Click += new System.EventHandler(this.bu_vpbc_Click);
-            // 
-            // num_valeur3
-            // 
-            this.num_valeur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num_valeur3.Location = new System.Drawing.Point(272, 233);
-            this.num_valeur3.Name = "num_valeur3";
-            this.num_valeur3.Size = new System.Drawing.Size(120, 29);
-            this.num_valeur3.TabIndex = 24;
-            this.toolTip1.SetToolTip(this.num_valeur3, "Entre ton nombre ici");
-            this.num_valeur3.Visible = false;
+            this.bu_vc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bu_vc.Location = new System.Drawing.Point(417, 0);
+            this.bu_vc.Name = "bu_vc";
+            this.bu_vc.Size = new System.Drawing.Size(153, 44);
+            this.bu_vc.TabIndex = 25;
+            this.bu_vc.Text = "Volume cylindre";
+            this.toolTip1.SetToolTip(this.bu_vc, "Permet de calculer un volume d\'un cylindre");
+            this.bu_vc.UseVisualStyleBackColor = true;
+            this.bu_vc.Click += new System.EventHandler(this.bu_vc_Click);
             // 
             // l_note
             // 
@@ -285,38 +274,30 @@ namespace Calculatrice
             this.l_cst.Text = "label1";
             this.l_cst.Visible = false;
             // 
-            // l_valeur3
+            // notifyIcon1
             // 
-            this.l_valeur3.AutoSize = true;
-            this.l_valeur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_valeur3.Location = new System.Drawing.Point(64, 233);
-            this.l_valeur3.Name = "l_valeur3";
-            this.l_valeur3.Size = new System.Drawing.Size(60, 24);
-            this.l_valeur3.TabIndex = 23;
-            this.l_valeur3.Text = "label1";
-            this.l_valeur3.Visible = false;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             // 
-            // bu_vc
+            // l_virg
             // 
-            this.bu_vc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bu_vc.Location = new System.Drawing.Point(0, 50);
-            this.bu_vc.Name = "bu_vc";
-            this.bu_vc.Size = new System.Drawing.Size(153, 44);
-            this.bu_vc.TabIndex = 25;
-            this.bu_vc.Text = "Volume cylindre";
-            this.toolTip1.SetToolTip(this.bu_vc, "Permet de calculer un volume d\'un cylindre");
-            this.bu_vc.UseVisualStyleBackColor = true;
-            this.bu_vc.Click += new System.EventHandler(this.bu_vc_Click);
+            this.l_virg.AutoSize = true;
+            this.l_virg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_virg.Location = new System.Drawing.Point(114, 489);
+            this.l_virg.Name = "l_virg";
+            this.l_virg.Size = new System.Drawing.Size(215, 16);
+            this.l_virg.TabIndex = 26;
+            this.l_virg.Text = "Ne rentrez pas de valeurs à virgule";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(808, 517);
+            this.Controls.Add(this.l_virg);
             this.Controls.Add(this.bu_vc);
-            this.Controls.Add(this.num_valeur3);
-            this.Controls.Add(this.l_valeur3);
-            this.Controls.Add(this.bu_vpbc);
             this.Controls.Add(this.bu_vb);
             this.Controls.Add(this.lL_github);
             this.Controls.Add(this.cb_cst);
@@ -335,11 +316,10 @@ namespace Calculatrice
             this.Controls.Add(this.l_valeur1);
             this.Controls.Add(this.bu_aq);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculatrice ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_valeur3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,10 +345,9 @@ namespace Calculatrice
         private System.Windows.Forms.ComboBox cb_cst;
         private System.Windows.Forms.LinkLabel lL_github;
         private System.Windows.Forms.Button bu_vb;
-        private System.Windows.Forms.Button bu_vpbc;
-        private System.Windows.Forms.Label l_valeur3;
-        private System.Windows.Forms.NumericUpDown num_valeur3;
         private System.Windows.Forms.Button bu_vc;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Label l_virg;
     }
 }
 
