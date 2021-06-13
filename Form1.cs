@@ -234,7 +234,6 @@ namespace Calculatrice
             bu_cos.Visible = true;
             bu_sin.Visible = true;
             bu_tan.Visible = true;
-            bu_vpbc.Visible = true;
             bu_vc.Visible = true;
 
             cb_cst.Items.Clear();
@@ -245,13 +244,15 @@ namespace Calculatrice
             cb_cst.Items.Clear();
             l_note.Visible = true;
 
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "0";
+
             bu_aq.Visible = false;
             bu_at.Visible = false;
             bu_cos.Visible = false;
             bu_sin.Visible = false;
             bu_tan.Visible = false;
             bu_vb.Visible = false;
-            bu_vpbc.Visible = false;
             bu_vc.Visible = false;
 
             bu_back.Enabled = true;
@@ -345,13 +346,15 @@ namespace Calculatrice
             cb_cst.Items.Clear();
             l_note.Visible = true;
 
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "0";
+
             bu_aq.Visible = false;
             bu_at.Visible = false;
             bu_cos.Visible = false;
             bu_sin.Visible = false;
             bu_tan.Visible = false;
             bu_vb.Visible = false;
-            bu_vpbc.Visible = false;
             bu_vc.Visible = false;
 
             bu_back.Enabled = true;
@@ -374,13 +377,16 @@ namespace Calculatrice
             cb_cst.Items.Clear();
             l_note.Visible = true;
 
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "0";
+
             bu_aq.Visible = false;
             bu_at.Visible = false;
             bu_cos.Visible = false;
             bu_sin.Visible = false;
             bu_tan.Visible = false;
             bu_vb.Visible = false;
-            bu_vpbc.Visible = false;
+            
             bu_vc.Visible = false;
 
             bu_back.Enabled = true;
@@ -419,22 +425,7 @@ namespace Calculatrice
             bu_back.Enabled = true;
         }
 
-        private void bu_vpbc_Click(object sender, EventArgs e)
-        {
-            whereAmI = 10;
 
-            l_valeur1.Text = "Longueur de la base";
-            l_valeur2.Text = "Hauteur";
-
-            num_valeur1.Text = "0";
-            num_valeur2.Text = "0";
-
-            l_valeur1.Visible = true;
-            l_valeur2.Visible = true;
-            num_valeur1.Visible = true;
-            num_valeur2.Visible = true;
-            bu_back.Enabled = true;
-        }
 
         private void bu_vc_Click(object sender, EventArgs e)
         {
@@ -451,6 +442,11 @@ namespace Calculatrice
             num_valeur1.Visible = true;
             num_valeur2.Visible = true;
             bu_back.Enabled = true;
+        }
+
+        private void num_valeur1_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -123,6 +123,7 @@ namespace Calculatrice
             this.toolTip1.SetToolTip(this.num_valeur1, "Entre ton nombre ici");
             this.num_valeur1.Visible = false;
             this.num_valeur1.ValueChanged += new System.EventHandler(this.num_valeur1_ValueChanged);
+            this.num_valeur1.Leave += new System.EventHandler(this.num_valeur1_Leave);
             // 
             // num_valeur2
             // 
