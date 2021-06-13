@@ -135,6 +135,11 @@ namespace Calculatrice
                 double result = (1 / 3) * (valeur1 * valeur2) * valeur3;
                 l_result.Text = "Le résultat est : " + Convert.ToString(result) + " cm3";
             }
+            if (whereAmI == 11)
+            {
+                double result = (valeur1 * valeur1) * Math.PI * valeur2;
+                l_result.Text = "Le résultat est : " + Convert.ToString(result) + " cm3";
+            }
 
             l_result.Visible = true;
         }
@@ -238,6 +243,7 @@ namespace Calculatrice
             bu_sin.Visible = true;
             bu_tan.Visible = true;
             bu_vpbc.Visible = true;
+            bu_vc.Visible = true;
 
             cb_cst.Items.Clear();
         }
@@ -256,6 +262,7 @@ namespace Calculatrice
             bu_vpbc.Visible = false;
             l_valeur3.Visible = false;
             num_valeur3.Visible = false;
+            bu_vc.Visible = false;
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
@@ -357,6 +364,7 @@ namespace Calculatrice
             bu_vpbc.Visible = false;
             l_valeur3.Visible = false;
             num_valeur3.Visible = false;
+            bu_vc.Visible = false;
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
@@ -387,6 +395,7 @@ namespace Calculatrice
             bu_vpbc.Visible = false;
             l_valeur3.Visible = false;
             num_valeur3.Visible = false;
+            bu_vc.Visible = false;
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
@@ -445,6 +454,23 @@ namespace Calculatrice
             num_valeur1.Visible = true;
             num_valeur2.Visible = true;
             num_valeur3.Visible = true;
+            bu_back.Enabled = true;
+        }
+
+        private void bu_vc_Click(object sender, EventArgs e)
+        {
+            whereAmI = 11;
+
+            l_valeur1.Text = "Rayon de la base";
+            l_valeur2.Text = "Hauteur";
+
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "0";
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = true;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = true;
             bu_back.Enabled = true;
         }
     }
