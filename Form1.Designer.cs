@@ -52,12 +52,17 @@ namespace Calculatrice
             this.l_cst = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.l_virg = new System.Windows.Forms.Label();
+            this.bu_somm = new System.Windows.Forms.Button();
+            this.bu_diff = new System.Windows.Forms.Button();
+            this.bu_prod = new System.Windows.Forms.Button();
+            this.bu_quo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_valeur2)).BeginInit();
             this.SuspendLayout();
             // 
             // bu_aq
             // 
+            this.bu_aq.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.bu_aq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bu_aq.Location = new System.Drawing.Point(0, 0);
             this.bu_aq.Name = "bu_aq";
@@ -65,7 +70,7 @@ namespace Calculatrice
             this.bu_aq.TabIndex = 0;
             this.bu_aq.Text = "Aire quadrilatère";
             this.toolTip1.SetToolTip(this.bu_aq, "Permet de calculer une aire d\'un quadrilatère");
-            this.bu_aq.UseVisualStyleBackColor = true;
+            this.bu_aq.UseVisualStyleBackColor = false;
             this.bu_aq.Click += new System.EventHandler(this.bu_aq_Click);
             // 
             // l_valeur1
@@ -138,6 +143,7 @@ namespace Calculatrice
             // 
             // bu_at
             // 
+            this.bu_at.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.bu_at.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bu_at.Location = new System.Drawing.Point(159, 0);
             this.bu_at.Name = "bu_at";
@@ -145,7 +151,7 @@ namespace Calculatrice
             this.bu_at.TabIndex = 8;
             this.bu_at.Text = "Aire triangle";
             this.toolTip1.SetToolTip(this.bu_at, "Permet de calculer l\'aire d\'un triangle");
-            this.bu_at.UseVisualStyleBackColor = true;
+            this.bu_at.UseVisualStyleBackColor = false;
             this.bu_at.Click += new System.EventHandler(this.bu_at_Click);
             // 
             // toolTip1
@@ -154,6 +160,7 @@ namespace Calculatrice
             // 
             // bu_cos
             // 
+            this.bu_cos.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.bu_cos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bu_cos.Location = new System.Drawing.Point(640, 0);
             this.bu_cos.Name = "bu_cos";
@@ -161,11 +168,12 @@ namespace Calculatrice
             this.bu_cos.TabIndex = 12;
             this.bu_cos.Text = "cos";
             this.toolTip1.SetToolTip(this.bu_cos, "Permet de calculer avec le cosinus");
-            this.bu_cos.UseVisualStyleBackColor = true;
+            this.bu_cos.UseVisualStyleBackColor = false;
             this.bu_cos.Click += new System.EventHandler(this.bu_cos_Click);
             // 
             // bu_sin
             // 
+            this.bu_sin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.bu_sin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bu_sin.Location = new System.Drawing.Point(694, 0);
             this.bu_sin.Name = "bu_sin";
@@ -173,11 +181,12 @@ namespace Calculatrice
             this.bu_sin.TabIndex = 13;
             this.bu_sin.Text = "sin";
             this.toolTip1.SetToolTip(this.bu_sin, "Permet de calculer avec le sinus");
-            this.bu_sin.UseVisualStyleBackColor = true;
+            this.bu_sin.UseVisualStyleBackColor = false;
             this.bu_sin.Click += new System.EventHandler(this.bu_sin_Click);
             // 
             // bu_tan
             // 
+            this.bu_tan.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.bu_tan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bu_tan.Location = new System.Drawing.Point(748, 0);
             this.bu_tan.Name = "bu_tan";
@@ -185,12 +194,12 @@ namespace Calculatrice
             this.bu_tan.TabIndex = 14;
             this.bu_tan.Text = "tan";
             this.toolTip1.SetToolTip(this.bu_tan, "Permet de calculer la tangente");
-            this.bu_tan.UseVisualStyleBackColor = true;
+            this.bu_tan.UseVisualStyleBackColor = false;
             this.bu_tan.Click += new System.EventHandler(this.bu_tan_Click);
             // 
             // bu_back
             // 
-            this.bu_back.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bu_back.BackColor = System.Drawing.SystemColors.ControlDark;
             this.bu_back.Enabled = false;
             this.bu_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bu_back.Location = new System.Drawing.Point(12, 461);
@@ -230,6 +239,7 @@ namespace Calculatrice
             // 
             // bu_vb
             // 
+            this.bu_vb.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.bu_vb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bu_vb.Location = new System.Drawing.Point(288, 0);
             this.bu_vb.Name = "bu_vb";
@@ -237,11 +247,12 @@ namespace Calculatrice
             this.bu_vb.TabIndex = 21;
             this.bu_vb.Text = "Volume boule";
             this.toolTip1.SetToolTip(this.bu_vb, "Permet de calculer le volume d\'une boule");
-            this.bu_vb.UseVisualStyleBackColor = true;
+            this.bu_vb.UseVisualStyleBackColor = false;
             this.bu_vb.Click += new System.EventHandler(this.bu_vb_Click);
             // 
             // bu_vc
             // 
+            this.bu_vc.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.bu_vc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bu_vc.Location = new System.Drawing.Point(417, 0);
             this.bu_vc.Name = "bu_vc";
@@ -249,7 +260,7 @@ namespace Calculatrice
             this.bu_vc.TabIndex = 25;
             this.bu_vc.Text = "Volume cylindre";
             this.toolTip1.SetToolTip(this.bu_vc, "Permet de calculer un volume d\'un cylindre");
-            this.bu_vc.UseVisualStyleBackColor = true;
+            this.bu_vc.UseVisualStyleBackColor = false;
             this.bu_vc.Click += new System.EventHandler(this.bu_vc_Click);
             // 
             // l_note
@@ -291,12 +302,69 @@ namespace Calculatrice
             this.l_virg.TabIndex = 26;
             this.l_virg.Text = "Ne rentrez pas de valeurs à virgule";
             // 
+            // bu_somm
+            // 
+            this.bu_somm.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.bu_somm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bu_somm.Location = new System.Drawing.Point(0, 50);
+            this.bu_somm.Name = "bu_somm";
+            this.bu_somm.Size = new System.Drawing.Size(92, 44);
+            this.bu_somm.TabIndex = 27;
+            this.bu_somm.Text = "Somme";
+            this.toolTip1.SetToolTip(this.bu_somm, "Permet de calculer une aire d\'un quadrilatère");
+            this.bu_somm.UseVisualStyleBackColor = false;
+            this.bu_somm.Click += new System.EventHandler(this.bu_somm_Click);
+            // 
+            // bu_diff
+            // 
+            this.bu_diff.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.bu_diff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bu_diff.Location = new System.Drawing.Point(98, 50);
+            this.bu_diff.Name = "bu_diff";
+            this.bu_diff.Size = new System.Drawing.Size(98, 44);
+            this.bu_diff.TabIndex = 28;
+            this.bu_diff.Text = "Différence";
+            this.toolTip1.SetToolTip(this.bu_diff, "Permet de calculer une aire d\'un quadrilatère");
+            this.bu_diff.UseVisualStyleBackColor = false;
+            this.bu_diff.Click += new System.EventHandler(this.bu_diff_Click);
+            // 
+            // bu_prod
+            // 
+            this.bu_prod.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.bu_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bu_prod.Location = new System.Drawing.Point(202, 50);
+            this.bu_prod.Name = "bu_prod";
+            this.bu_prod.Size = new System.Drawing.Size(80, 44);
+            this.bu_prod.TabIndex = 29;
+            this.bu_prod.Text = "Produit";
+            this.toolTip1.SetToolTip(this.bu_prod, "Permet de calculer une aire d\'un quadrilatère");
+            this.bu_prod.UseVisualStyleBackColor = false;
+            this.bu_prod.Click += new System.EventHandler(this.bu_prod_Click);
+            // 
+            // bu_quo
+            // 
+            this.bu_quo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.bu_quo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bu_quo.Location = new System.Drawing.Point(288, 50);
+            this.bu_quo.Name = "bu_quo";
+            this.bu_quo.Size = new System.Drawing.Size(89, 44);
+            this.bu_quo.TabIndex = 30;
+            this.bu_quo.Text = "Quotient";
+            this.toolTip1.SetToolTip(this.bu_quo, "Permet de calculer une aire d\'un quadrilatère");
+            this.bu_quo.UseVisualStyleBackColor = false;
+            this.bu_quo.Click += new System.EventHandler(this.bu_quo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(808, 517);
+            this.Controls.Add(this.bu_quo);
+            this.Controls.Add(this.bu_prod);
+            this.Controls.Add(this.bu_diff);
+            this.Controls.Add(this.bu_somm);
             this.Controls.Add(this.l_virg);
             this.Controls.Add(this.bu_vc);
             this.Controls.Add(this.bu_vb);
@@ -349,6 +417,10 @@ namespace Calculatrice
         private System.Windows.Forms.Button bu_vc;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label l_virg;
+        private System.Windows.Forms.Button bu_somm;
+        private System.Windows.Forms.Button bu_diff;
+        private System.Windows.Forms.Button bu_prod;
+        private System.Windows.Forms.Button bu_quo;
     }
 }
 

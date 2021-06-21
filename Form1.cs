@@ -136,6 +136,26 @@ namespace Calculatrice
                 double result = (valeur1 * valeur1) * Math.PI * valeur2;
                 l_result.Text = "Le résultat est : " + Convert.ToString(result) + " cm3";
             }
+            if (whereAmI == 12)
+            {
+                double result = (valeur1) + (valeur2);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result);
+            }
+            if (whereAmI == 13)
+            {
+                double result = (valeur1) - (valeur2);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result);
+            }
+            if (whereAmI == 14)
+            {
+                double result = (valeur1) * (valeur2);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result);
+            }
+            if (whereAmI == 15)
+            {
+                double result = (valeur1) / (valeur2);
+                l_result.Text = "Le résultat est : " + Convert.ToString(result);
+            }
 
             l_result.Visible = true;
         }
@@ -447,6 +467,74 @@ namespace Calculatrice
         private void num_valeur1_Leave(object sender, EventArgs e)
         {
 
+        }
+
+        private void bu_somm_Click(object sender, EventArgs e)
+        {
+            whereAmI = 12;
+
+            l_valeur1.Text = "Valeur 1";
+            l_valeur2.Text = "Valeur 2";
+
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "0";
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = true;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = true;
+            bu_back.Enabled = true;
+        }
+
+        private void bu_diff_Click(object sender, EventArgs e)
+        {
+            whereAmI = 13;
+
+            l_valeur1.Text = "Valeur 1";
+            l_valeur2.Text = "Valeur 2";
+
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "0";
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = true;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = true;
+            bu_back.Enabled = true;
+        }
+
+        private void bu_prod_Click(object sender, EventArgs e)
+        {
+            whereAmI = 14;
+
+            l_valeur1.Text = "Valeur 1";
+            l_valeur2.Text = "Valeur 2";
+
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "0";
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = true;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = true;
+            bu_back.Enabled = true;
+        }
+
+        private void bu_quo_Click(object sender, EventArgs e)
+        {
+            whereAmI = 15;
+
+            l_valeur1.Text = "Valeur 1";
+            l_valeur2.Text = "Valeur 2";
+
+            num_valeur1.Text = "0";
+            num_valeur2.Text = "0";
+
+            l_valeur1.Visible = true;
+            l_valeur2.Visible = true;
+            num_valeur1.Visible = true;
+            num_valeur2.Visible = true;
+            bu_back.Enabled = true;
         }
     }
 }
