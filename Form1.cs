@@ -255,6 +255,10 @@ namespace Calculatrice
             bu_sin.Visible = true;
             bu_tan.Visible = true;
             bu_vc.Visible = true;
+            bu_somm.Visible = true;
+            bu_diff.Visible = true;
+            bu_prod.Visible = true;
+            bu_quo.Visible = true;
 
             cb_cst.Items.Clear();
         }
@@ -274,6 +278,10 @@ namespace Calculatrice
             bu_tan.Visible = false;
             bu_vb.Visible = false;
             bu_vc.Visible = false;
+            bu_somm.Visible = false;
+            bu_diff.Visible = false;
+            bu_prod.Visible = false;
+            bu_quo.Visible = false;
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
@@ -376,6 +384,10 @@ namespace Calculatrice
             bu_tan.Visible = false;
             bu_vb.Visible = false;
             bu_vc.Visible = false;
+            bu_somm.Visible = false;
+            bu_diff.Visible = false;
+            bu_prod.Visible = false;
+            bu_quo.Visible = false;
 
             bu_back.Enabled = true;
             l_cst.Visible = true;
@@ -406,7 +418,10 @@ namespace Calculatrice
             bu_sin.Visible = false;
             bu_tan.Visible = false;
             bu_vb.Visible = false;
-            
+            bu_somm.Visible = false;
+            bu_diff.Visible = false;
+            bu_prod.Visible = false;
+            bu_quo.Visible = false;
             bu_vc.Visible = false;
 
             bu_back.Enabled = true;
@@ -535,6 +550,11 @@ namespace Calculatrice
             num_valeur1.Visible = true;
             num_valeur2.Visible = true;
             bu_back.Enabled = true;
+        }
+
+        private void l_virg_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
